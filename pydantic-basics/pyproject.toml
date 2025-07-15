@@ -1,0 +1,30 @@
+[project]
+name = "pydantic-basics"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic[email]>=2.11.7",
+    "pydantic-extra-types>=2.10.5",
+    "pydantic-settings>=2.10.1",
+    "python-dotenv>=1.1.1",
+    "pyyaml>=6.0.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4.1", "ruff>=0.12.3"]
+
+[tool.ruff]
+target-version = "py313"
+lint.fixable = ["ALL"]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
