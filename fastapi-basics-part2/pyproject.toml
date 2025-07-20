@@ -1,0 +1,40 @@
+[project]
+name = "fastapi-basics-part2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "faker>=37.4.0",
+    "fastapi[standard]>=0.116.1",
+    "fastapi-cli>=0.0.8",
+    "pydantic>=2.11.7",
+    "uvicorn>=0.35.0",
+    "gunicorn>=23.0.0",
+    "python-dotenv>=1.1.1",
+    "pydantic-settings>=2.10.1",
+    "pydantic-extra-types>=2.10.5",
+    "python-multipart>=0.0.20",
+    "base45>=0.4.4",
+    "qrcode>=8.2",
+    "joserfc>=1.2.2",
+    "pillow>=11.3.0",
+    "typer>=0.16.0",
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4.1", "ruff>=0.12.3"]
+
+[tool.ruff]
+target-version = "py313"
+lint.fixable = ["ALL"]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
